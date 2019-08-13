@@ -1,0 +1,17 @@
+commit 637845dfaa218780d8430c23001ac16f58520632
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Aug 13 08:23:10 2019 -0400
+
+    readme
+
+commit 51be4a2e49ebe5064cc801dd5259b9c91a2f17dd
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Aug 13 08:22:44 2019 -0400
+
+    remove Conflicts: kicksecure-base-files
+
+commit 545c69e7d6f5e15fc798abf0da0a174ef8f49034
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Aug 13 08:20:13 2019 -0400
+
+    initial implementation (forked from whonix-base-files)
