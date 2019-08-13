@@ -1,0 +1,24 @@
+## Copyright (C) 2012 - 2018 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+Source: kicksecure-base-files
+Section: misc
+Priority: optional
+Maintainer: Patrick Schleizer <adrelanos@riseup.net>
+Build-Depends: debhelper (>= 12), genmkfile, config-package-dev, ronn
+Homepage: https://github.com/Kicksecure/kicksecure-base-files
+Vcs-Browser: https://github.com/Kicksecure/kicksecure-base-files
+Vcs-Git: https://github.com/Kicksecure/kicksecure-base-files.git
+Standards-Version: 4.3.0
+
+Package: kicksecure-base-files
+Architecture: all
+Depends: less, sudo, ${misc:Depends}
+Provides: ${diverted-files}
+Conflicts: kicksecure-base-files, ${diverted-files}
+Description: Kicksecure base system miscellaneous files
+ This package contains several important miscellaneous files, such as
+ /etc/issue, /etc/motd, /etc/dpkg/origins/kicksecure,
+ /etc/skel/.bashrc, /usr/bin/kicksecure, and others.
+ .
+ Sets the KICKSECURE environment variable to 1 as well.

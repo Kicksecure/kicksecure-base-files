@@ -1,0 +1,48 @@
+ DISCLAIMER OF WARRANTY.
+ .
+ THE PROGRAM IS PROVIDED WITHOUT ANY WARRANTIES, WHETHER EXPRESSED OR IMPLIED,
+ INCLUDING, WITHOUT LIMITATION, IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR
+ PURPOSE, NON-INFRINGEMENT, TITLE AND MERCHANTABILITY.  THE PROGRAM IS BEING
+ DELIVERED OR MADE AVAILABLE 'AS IS', 'WITH ALL FAULTS' AND WITHOUT WARRANTY OR
+ REPRESENTATION.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE
+ PROGRAM IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF
+ ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+ .
+ LIMITATION OF LIABILITY.
+ .
+ UNDER NO CIRCUMSTANCES SHALL ANY COPYRIGHT HOLDER OR ITS AFFILIATES, OR ANY
+ OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE
+ LIABLE TO YOU, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, FOR ANY
+ DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, DIRECT, INDIRECT, SPECIAL,
+ INCIDENTAL, CONSEQUENTIAL OR PUNITIVE DAMAGES ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE USE OR INABILITY TO USE THE PROGRAM OR OTHER DEALINGS WITH
+ THE PROGRAM(INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED
+ INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE
+ PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), WHETHER OR NOT ANY COPYRIGHT HOLDER
+ OR SUCH OTHER PARTY RECEIVES NOTICE OF ANY SUCH DAMAGES AND WHETHER OR NOT SUCH
+ DAMAGES COULD HAVE BEEN FORESEEN.
+ .
+ INDEMNIFICATION.
+ .
+ IF YOU CONVEY A COVERED WORK AND AGREE WITH ANY RECIPIENT
+ OF THAT COVERED WORK THAT YOU WILL ASSUME ANY LIABILITY FOR THAT COVERED WORK,
+ YOU HEREBY AGREE TO INDEMNIFY, DEFEND AND HOLD HARMLESS THE OTHER LICENSORS AND
+ AUTHORS OF THAT COVERED WORK FOR ANY DAMAGES, DEMANDS, CLAIMS, LOSSES, CAUSES OF
+ ACTION, LAWSUITS, JUDGMENTS EXPENSES (INCLUDING WITHOUT LIMITATION REASONABLE
+ ATTORNEYS' FEES AND EXPENSES) OR ANY OTHER LIABILITY ARISING FROM, RELATED TO OR
+ IN CONNECTION WITH YOUR ASSUMPTIONS OF LIABILITY.
+
+If the disclaimer of warranty and limitation of liability provided
+above cannot be given local legal effect according to their terms,
+reviewing courts shall apply local law that most closely approximates
+an absolute waiver of all civil liability in connection with the
+Program, unless a warranty or assumption of liability accompanies a
+copy of the Program in return for a fee.
+
+This is not the usual blah blah blah but fact. Kicksecure is experimental software. Do not rely on it for strong anonymity. Kicksecure is free of charge. Kicksecure is a derivative of Debian GNU/Linux. Kicksecure is produced independently of, with no guarantee from, The Tor Project. Kicksecure is created by volunteers in their spare time. Kicksecure was created by self-taught hobbyists in their spare time, without the backing of any particular formal certification or training. Although Kicksecure attempts to be as usable as possible, there are many ways in which it fails. Kicksecure is in English. Do not use Kicksecure without excellent knowledge of the English language. Misunderstandings have consequences. Kicksecure is based on other software, including GNU/Linux, Debian, and virtualization. Do not rely on Kicksecure without working knowledge of these technologies.
+
+The documentation available on Kicksecure.org is a crash course in anonymity, privacy, and security on the Internet. Kicksecure is a technological means to anonymity, but staying anonymous is not just a technological problem: No tool is enough to keep you safe. Anonymity is a complex problem without an easy solution, and security is only as strong as its weakest link, often the user. The more you know, the safer you can be.
+
+Kicksecure is a compilation of software packages, each under its own copyright and license. The exact license terms for each program are described in the individual files in /usr/share/doc/*/copyright.
+
+The compilation is made available the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version with additional terms applicable per GNU GPL version 3 section 7. The license can be refereed to as GPL-3+-with-additional-terms-1 and can be found in /usr/share/kicksecure/KICKSECURE_BINARY_LICENSE_AGREEMENT or online here: https://www.kicksecure.org/wiki/Kicksecure:Copyrights
