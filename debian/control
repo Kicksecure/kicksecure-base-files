@@ -15,7 +15,7 @@ Package: kicksecure-base-files
 Architecture: all
 Depends: less, sudo, ${misc:Depends}
 Provides: ${diverted-files}
-Conflicts: kicksecure-base-files, ${diverted-files}
+Conflicts: ${diverted-files}
 Description: Kicksecure base system miscellaneous files
  This package contains several important miscellaneous files, such as
  /etc/issue, /etc/motd, /etc/dpkg/origins/kicksecure,
