@@ -20,7 +20,7 @@ and command line tools, which come with Kicksecure.
 
 ## ONLINE DOCUMENTATION
 
-https://www.kicksecure.org
+https://www.kicksecure.com
 
 ## AUTHOR
 

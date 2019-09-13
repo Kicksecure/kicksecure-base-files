@@ -55,7 +55,7 @@ colors
 
 echo "\
 ${bold}Documentation can be found on Kicksecure homepage.
-https://www.kicksecure.org
+https://www.kicksecure.com
 
 ${under}Change keyboard layout:${reset}
 sudo dpkg-reconfigure keyboard-configuration
