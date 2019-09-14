@@ -39,10 +39,34 @@ an absolute waiver of all civil liability in connection with the
 Program, unless a warranty or assumption of liability accompanies a
 copy of the Program in return for a fee.
 
-This is not the usual blah blah blah but fact. Kicksecure is experimental software. Do not rely on it for strong anonymity. Kicksecure is free of charge. Kicksecure is a derivative of Debian GNU/Linux. Kicksecure is produced independently of, with no guarantee from, The Tor Project. Kicksecure is created by volunteers in their spare time. Kicksecure was created by self-taught hobbyists in their spare time, without the backing of any particular formal certification or training. Although Kicksecure attempts to be as usable as possible, there are many ways in which it fails. Kicksecure is in English. Do not use Kicksecure without excellent knowledge of the English language. Misunderstandings have consequences. Kicksecure is based on other software, including GNU/Linux, Debian, and virtualization. Do not rely on Kicksecure without working knowledge of these technologies.
+This is not the usual blah blah blah but fact. Kicksecure is experimental
+software. Do not rely on it for strong anonymity. Kicksecure is free of charge.
+Kicksecure is a derivative of Debian GNU/Linux. Kicksecure is produced
+independently of, with no guarantee from, The Tor Project. Kicksecure is
+created by volunteers in their spare time. Kicksecure was created by
+self-taught hobbyists in their spare time, without the backing of any
+particular formal certification or training. Although Kicksecure attempts to be
+as usable as possible, there are many ways in which it fails. Kicksecure is in
+English. Do not use Kicksecure without excellent knowledge of the English
+language. Misunderstandings have consequences. Kicksecure is based on other
+software, including GNU/Linux, Debian, and virtualization. Do not rely on
+Kicksecure without working knowledge of these technologies.
 
-The documentation available on Kicksecure.com is a crash course in anonymity, privacy, and security on the Internet. Kicksecure is a technological means to anonymity, but staying anonymous is not just a technological problem: No tool is enough to keep you safe. Anonymity is a complex problem without an easy solution, and security is only as strong as its weakest link, often the user. The more you know, the safer you can be.
+The documentation available on Kicksecure.com is a crash course in anonymity,
+privacy, and security on the Internet. Kicksecure is a technological means to
+anonymity, but staying anonymous is not just a technological problem: No tool
+is enough to keep you safe. Anonymity is a complex problem without an easy
+solution, and security is only as strong as its weakest link, often the user.
+The more you know, the safer you can be.
 
-Kicksecure is a compilation of software packages, each under its own copyright and license. The exact license terms for each program are described in the individual files in /usr/share/doc/*/copyright.
+Kicksecure is a compilation of software packages, each under its own copyright
+and license. The exact license terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
 
-The compilation is made available the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version with additional terms applicable per GNU GPL version 3 section 7. The license can be refereed to as GPL-3+-with-additional-terms-1 and can be found in /usr/share/kicksecure/KICKSECURE_BINARY_LICENSE_AGREEMENT or online here: https://www.whonix.org/wiki/Kicksecure:Copyrights
+The compilation is made available the terms of the GNU General Public License
+as published by the Free Software Foundation, either version 3 of the License,
+or (at your option) any later version with additional terms applicable per GNU
+GPL version 3 section 7. The license can be refereed to as
+GPL-3+-with-additional-terms-1 and can be found in
+/usr/share/kicksecure/KICKSECURE_BINARY_LICENSE_AGREEMENT or online here:
+https://www.whonix.org/wiki/Kicksecure:Copyrights
