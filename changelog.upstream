@@ -1,3 +1,15 @@
+commit 759ee578a526dce5e2b6dbef090ee1642acefaf8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Sep 14 01:13:57 2019 -0400
+
+    word wrap
+
+commit 76ac07119e41abd0cacfd38b897858f64b3ea44f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Sep 13 13:35:36 2019 +0000
+
+    bumped changelog version
+
 commit 0d36c2a0e67ba8dd4c5d3d7a5ac0194eb5a606c4
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Sep 13 13:10:40 2019 +0000
