@@ -1,3 +1,9 @@
+kicksecure-base-files (3:4.8-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 30 Jan 2020 11:49:38 +0000
+
 kicksecure-base-files (3:4.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
