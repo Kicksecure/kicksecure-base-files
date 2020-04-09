@@ -1,3 +1,15 @@
+commit 487b087cd2f955e117cfd0c5793426316d739811
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 9 10:09:21 2020 +0000
+
+    move motd creation to dist-base-files
+
+commit 83f821b79f853d29f0bb28cd5f7fbeb856b64ef4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 2 07:50:17 2020 -0400
+
+    bumped changelog version
+
 commit 4856ee4a3d030136a0a2361b26044dc246c933dc
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 2 07:22:36 2020 -0400
