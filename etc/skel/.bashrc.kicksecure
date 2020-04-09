@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# Modified for Kicksecure, see COPYING for copying conditions.
+# Modified for Whonix, see COPYING for copying conditions.
 
 # If not running interactively, don't do anything
 case $- in
@@ -111,37 +111,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
-## Kicksecure /home/user/.bashrc
+## Whonix /home/user/.bashrc
 
 ## Using /home/user/.bashrc because there is no /etc/bashrc.d (or similar).
 ## Editing /etc/bash.bashrc could cause conflicts when it gets updated by
 ## the bash maintainer.
 ## http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=675008
 
-## If not running interactively, don't do anything.
-if [ -z "$PS1" ]; then
-   return
+if test -x /usr/lib/helper-scripts/bashrc-terminal-emulator ; then
+   source /usr/lib/helper-scripts/bashrc-terminal-emulator
 fi
 
-## If running in a login shell, don't do anything.
-## Login shells are greeted by /etc/motd.
-shopt -q login_shell
-var="$?"
-if [ "$var" = "0" ]; then
-   return
-fi
-
-## We run in a terminal emulator.
-
-## Let's greet it with motd.
-if [ -d /usr/lib/qubes ]; then
-   if [ -f /etc/motd.qubes-kicksecure ]; then
-      echo "$(cat /etc/motd.qubes-kicksecure)"
-   fi
-else
-   if [ -f /etc/motd ]; then
-      echo "$(cat /etc/motd)"
-   fi
-fi
-
-## End of Kicksecure /home/user/.bashrc
+## End of Whonix /home/user/.bashrc
