@@ -1,3 +1,15 @@
+commit 8fa8bb6c9e56382a53b63c5f65866e37fd2d8100
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Aug 6 13:40:35 2020 -0400
+
+    grub branding
+
+commit e97ae9f8e017a18fa0bfed0b76cd4dd9c8a52df1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 16 08:35:43 2020 -0400
+
+    bumped changelog version
+
 commit 2e2261a0786f1d5dda85c238be9f849f59d3b776
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 15 14:05:32 2020 -0400
