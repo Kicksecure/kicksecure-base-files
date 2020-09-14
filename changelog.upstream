@@ -1,3 +1,21 @@
+commit 349c04792ee4dca7eb77cfe67f8496e3fcf1161e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Sep 14 05:33:53 2020 -0400
+
+    update link
+
+commit 34fcab95f6cecad88118a038f3f15305ef2c8378
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Sep 14 05:33:19 2020 -0400
+
+    fix domain name
+
+commit 8202addceea3e198d089ea62b35c1e23ef7cbb74
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Aug 6 15:22:56 2020 -0400
+
+    bumped changelog version
+
 commit 8fa8bb6c9e56382a53b63c5f65866e37fd2d8100
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Aug 6 13:40:35 2020 -0400
