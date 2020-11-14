@@ -7,7 +7,7 @@ This package contains several important miscellaneous files, such as
 Sets the KICKSECURE environment variable to 1 as well.
 ## How to install `kicksecure-base-files` using apt-get ##
 
-1\. Download [Whonix's Signing Key]().
+1\. Download Whonix's Signing Key.
 
 ```
 wget https://www.whonix.org/patrick.asc
