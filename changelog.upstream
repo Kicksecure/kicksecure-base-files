@@ -1,3 +1,21 @@
+commit 0e36d0a0fa33c85d0846103853b7bec76e6fc035
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Mar 11 16:24:15 2021 -0500
+
+    readme
+
+commit 913af669b27b8ee60712d3d729b9d6d8a266e42a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Mar 11 14:55:25 2021 -0500
+
+    update-grub
+
+commit ffde0b01225976cc38aa96066ea2551ec90157aa
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Nov 14 11:55:16 2020 -0500
+
+    bumped changelog version
+
 commit 5f3e49fc524884cd93ac16735edcd74330274c70
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Nov 14 11:55:16 2020 -0500
