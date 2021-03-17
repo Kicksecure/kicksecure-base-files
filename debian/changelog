@@ -2,100 +2,100 @@ kicksecure-base-files (3:5.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 11 Mar 2021 21:24:15 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 11 Mar 2021 21:24:15 +0000
 
 kicksecure-base-files (3:5.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 14 Nov 2020 16:55:16 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 14 Nov 2020 16:55:16 +0000
 
 kicksecure-base-files (3:5.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 14 Sep 2020 09:44:23 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 14 Sep 2020 09:44:23 +0000
 
 kicksecure-base-files (3:5.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 06 Aug 2020 19:22:56 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 06 Aug 2020 19:22:56 +0000
 
 kicksecure-base-files (3:5.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 16 Apr 2020 12:35:43 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 16 Apr 2020 12:35:43 +0000
 
 kicksecure-base-files (3:5.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 09 Apr 2020 10:17:25 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 09 Apr 2020 10:17:25 +0000
 
 kicksecure-base-files (3:5.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 02 Apr 2020 11:50:17 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 02 Apr 2020 11:50:17 +0000
 
 kicksecure-base-files (3:5.0-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 01 Apr 2020 14:47:00 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 01 Apr 2020 14:47:00 +0000
 
 kicksecure-base-files (3:4.9-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 27 Mar 2020 11:33:44 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 27 Mar 2020 11:33:44 +0000
 
 kicksecure-base-files (3:4.8-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 30 Jan 2020 11:49:38 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 30 Jan 2020 11:49:38 +0000
 
 kicksecure-base-files (3:4.7-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 14 Sep 2019 13:19:13 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 14 Sep 2019 13:19:13 +0000
 
 kicksecure-base-files (3:4.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Fri, 13 Sep 2019 13:35:36 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Fri, 13 Sep 2019 13:35:36 +0000
 
 kicksecure-base-files (3:4.5-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 28 Aug 2019 11:41:42 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 28 Aug 2019 11:41:42 +0000
 
 kicksecure-base-files (3:4.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 13 Aug 2019 12:31:13 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 13 Aug 2019 12:31:13 +0000
 
 kicksecure-base-files (3:4.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 13 Aug 2019 12:29:04 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 13 Aug 2019 12:29:04 +0000
 
 kicksecure-base-files (3:4.2-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Thu, 01 Aug 2019 12:10:58 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Thu, 01 Aug 2019 12:10:58 +0000
 
 kicksecure-base-files (3:4.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
 
- -- Patrick Schleizer <adrelanos@riseup.net>  Wed, 31 Jul 2019 07:48:52 +0000
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 31 Jul 2019 07:48:52 +0000
