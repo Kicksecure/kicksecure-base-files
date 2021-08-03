@@ -118,8 +118,8 @@ fi
 ## the bash maintainer.
 ## http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=675008
 
-if test -x /usr/lib/helper-scripts/bashrc-terminal-emulator ; then
-   source /usr/lib/helper-scripts/bashrc-terminal-emulator
+if test -x /usr/libexec/helper-scripts/bashrc-terminal-emulator ; then
+   source /usr/libexec/helper-scripts/bashrc-terminal-emulator
 fi
 
 ## End of Whonix /home/user/.bashrc
