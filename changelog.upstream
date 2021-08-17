@@ -1,3 +1,15 @@
+commit c002d6b6029644c3bbf9c1311ab512a70d1397a7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 17 12:10:34 2021 -0400
+
+    `/etc/kicksecure_version`: `16`
+
+commit 5ee5fae5b30d5d9ddc8127f94c85a99618c465ff
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Aug 5 16:45:51 2021 -0400
+
+    bumped changelog version
+
 commit 10dfd853d4efb13a730b19bd47969bc0dac12abc
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Aug 4 14:58:49 2021 -0400
