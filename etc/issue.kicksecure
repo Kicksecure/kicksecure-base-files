@@ -6,7 +6,7 @@ default username: user
 default password: changeme
 
 The default root account is locked (or should be locked). This is a security feature. See:
-https://www.whonix.org/wiki/root
+https://www.kicksecure.com/wiki/root
 
 Ignore "host login:" below. Do not enter your current host computer username or password if this is a virtual machine.
 
