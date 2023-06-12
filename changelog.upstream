@@ -1,3 +1,21 @@
+commit 7a17489829af089524436fa091c277cbc6ae47b7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jun 12 14:51:58 2023 +0000
+
+    update copyright year
+
+commit d6887d51604e6781f8493257a6cef9e9e0b2d5b7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jun 12 14:39:24 2023 +0000
+
+    bump /etc/kicksecure_version
+
+commit 8ff880654d576685b2945ad698d7b919d185071c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jun 8 10:40:16 2022 -0400
+
+    bumped changelog version
+
 commit 99235b62096085658df71b51c759e3ea400943a2
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Jun 8 09:26:04 2022 -0400
