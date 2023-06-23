@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# Modified for Whonix, see COPYING for copying conditions.
+# Modified for Kicksecure, see COPYING for copying conditions.
 
 # If not running interactively, don't do anything
 case $- in
@@ -111,7 +111,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-## Whonix /home/user/.bashrc
+## Kicksecure /home/user/.bashrc
 
 ## Using /home/user/.bashrc because there is no /etc/bashrc.d (or similar).
 ## Editing /etc/bash.bashrc could cause conflicts when it gets updated by
@@ -122,4 +122,4 @@ if test -x /usr/libexec/helper-scripts/bashrc-terminal-emulator ; then
    source /usr/libexec/helper-scripts/bashrc-terminal-emulator
 fi
 
-## End of Whonix /home/user/.bashrc
+## End of Kicksecure /home/user/.bashrc
