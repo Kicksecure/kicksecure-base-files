@@ -1,1 +1,2 @@
 /etc/profile.d/20_kicksecure.sh /etc/zprofile.d/20_kicksecure.zsh
+/etc/profile.d/20_kicksecure.sh /etc/X11/Xsession.d/20_kicksecure.sh

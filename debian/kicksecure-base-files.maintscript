@@ -2,3 +2,4 @@
 ## See the file COPYING for copying conditions.
 
 rm_conffile /etc/motd.qubes-kicksecure
+rm_conffile /etc/X11/Xsession.d/20kicksecure
