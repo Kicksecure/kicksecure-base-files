@@ -1,3 +1,15 @@
+commit 31b43aa93fe53c2db85c59850eee2e03f7ecf221
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Oct 21 12:22:53 2023 -0400
+
+    fix, `/etc/X11/Xsession.d` does not support files ending with `.sh`
+
+commit e02165031a293d8b85d2b7e8c527bfcce509f8a5
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Oct 12 10:42:52 2023 -0400
+
+    bumped changelog version
+
 commit 345f3d756f8908150f64ad9100cf7021778a7364
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Oct 12 10:40:27 2023 -0400
