@@ -63,10 +63,10 @@ Kicksecure is a compilation of software packages, each under its own copyright
 and license. The exact license terms for each program are described in the
 individual files in /usr/share/doc/*/copyright.
 
-The compilation is made available the terms of the GNU General Public License
+The compilation is made available the terms of the GNU Affero General Public License
 as published by the Free Software Foundation, either version 3 of the License,
 or (at your option) any later version with additional terms applicable per GNU
-GPL version 3 section 7. The license can be refereed to as
-GPL-3+-with-additional-terms-1 and can be found in
+AGPL version 3 section 7. The license can be refereed to as
+AGPL-3+-with-additional-terms-1 and can be found in
 /usr/share/kicksecure/KICKSECURE_BINARY_LICENSE_AGREEMENT or online here:
 https://www.whonix.org/wiki/Kicksecure:Copyrights
