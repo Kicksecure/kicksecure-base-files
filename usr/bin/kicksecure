@@ -63,7 +63,7 @@ sudo dpkg-reconfigure console-data
 
 ${under}Default username and password:${reset}
 Default username: user
-Default password: changeme
+Default password: No password required. (Passwordless login.)
 
 ${under}For slower output, run:${reset}
 kicksecure | more
