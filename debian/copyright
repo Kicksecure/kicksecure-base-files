@@ -11,7 +11,7 @@ Comments: Downloaded from:
           http://metadata.ftp-master.debian.org/changelogs//main/b/bash/bash_4.2+dfsg-0.1_copyright
           http://www.webcitation.org/6PnVoSp1k
 Copyright: Copyright (C) 1987-2010 Free Software Foundation, Inc.
-License: GPL-3+
+License: GPL-3+-with-bash-exception
  Bash is free software; you can redistribute it and/or modify it under
  the terms of the GNU General Public License as published by the Free
  Software Foundation; either version 3, or (at your option) any later
@@ -34,6 +34,16 @@ License: GPL-3+
  and standards expect shells not to print such messages.  This
  exception applies to any program that serves as a shell and that is
  based primarily on Bash as opposed to other GNU software.
+
+Files: boot/grub/themes/kicksecure/*
+Comments: Based upon the Acer theme from
+          https://github.com/AdisonCavani/distro-grub-themes
+Copyright: 2021 - 2024 Adrian Środoń <adriansrodon@tuta.io>
+                  2024 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
+License: GPL-3
+ On Debian systems, the full text of the GNU General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/GPL-3'.
 
 License: AGPL-3+
                     GNU AFFERO GENERAL PUBLIC LICENSE
