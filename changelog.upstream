@@ -1,3 +1,22 @@
+commit 57a77b7f591c1a34a483e7c5019e2109ffa7d711
+Merge: 44b1f44 94b6ee4
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Nov 10 06:35:10 2024 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/grub-theme'
+
+commit 94b6ee450f1ce610da52e59db0973160d6cf5eeb
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Oct 29 18:27:07 2024 -0500
+
+    Create GRUB themes for BIOS and UEFI systems
+
+commit 44b1f44fb0b53f374759c8f815650ea501bc3719
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Jul 28 23:19:50 2024 +0000
+
+    bumped changelog version
+
 commit 2441fa6d9e1f07f470ac125cf9209cd32c15c987
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Jul 28 19:13:04 2024 -0400
