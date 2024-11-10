@@ -15,6 +15,13 @@ true "
 #####################################################################
 "
 
+## Symlink all shared GRUB theme files
+readarray -t grub_theme_common_file_list < <(cd '/boot/grub/themes/dist-common'; find -mindepth 1 -maxdepth 1 | sed 's/^.\///')
+for grub_theme_common_file in "${grub_theme_common_file_list[@]}"; do
+   rm -rf "/boot/grub/themes/kicksecure/${grub_theme_common_file}"
+   ln -s "../dist-common/${grub_theme_common_file}" "/boot/grub/themes/kicksecure/${grub_theme_common_file}"
+done
+
 ## https://phabricator.whonix.org/T377
 ## Debian has no update-grub trigger yet:
 ## https://bugs.debian.org/481542
