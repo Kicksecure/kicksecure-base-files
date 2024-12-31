@@ -1,4 +1,4 @@
-## Copyright (C) 2024 - 2024 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
+## Copyright (C) 2024 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
 ## See the file COPYING for copying conditions.
 
 kicksecure-base-files: package-contains-documentation-outside-usr-share-doc [boot/grub/themes/kicksecure/theme-16x9.txt]
