@@ -10,6 +10,28 @@ terminal-width: "100%"
 terminal-height: "100%"
 terminal-border: "0"
 
+# Header
++ label {
+  left = 15%
+  top = 31%
+  align = left
+  text = "Choose boot mode"
+  color = "#ffffff"
+  font = "Inter-grub Bold 34"
+}
+
+# Countdown label
+# You can change the name of default starting OS here
++ label {
+  left = 15%
+  top = 39%
+  align = "center"
+  id = "__timeout__"
+  text = "System will start in %d seconds"
+  color = "#ffffff"
+  font = "Inter-grub Regular 17"
+}
+
 # Boot menu
 + boot_menu {
   left = 15%
@@ -28,15 +50,21 @@ terminal-border: "0"
   selected_item_pixmap_style = "select_*.png"
 }
 
-
-# Countdown label
-# You can change the name of default starting OS here
+# Footer
 + label {
   left = 15%
-  top = 39%
-  align = "center"
-  id = "__timeout__"
-  text = "Selected OS will start in %d seconds"
-  color = "#ffffff"
+  top = 88%
+  align = left
+  text = "Use up and down keys to select a boot mode and then press ENTER. To edit commands before booting,"
+  color = "#c4c4c4"
+  font = "Inter-grub Regular 17"
+}
+
++ label {
+  left = 15%
+  top = 92%
+  align = left
+  text = "press 'e'. To access a command line, press 'c'."
+  color = "#c4c4c4"
   font = "Inter-grub Regular 17"
 }
