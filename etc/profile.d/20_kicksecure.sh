@@ -4,5 +4,5 @@
 ## See the file COPYING for copying conditions.
 
 if [ -x /usr/libexec/kicksecure/kicksecure.sh ]; then
-   . /usr/libexec/kicksecure/kicksecure.sh
+   . /usr/libexec/kicksecure/kicksecure.sh >/dev/null 2>/dev/null
 fi
