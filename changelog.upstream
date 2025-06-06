@@ -1,3 +1,22 @@
+commit 065a25e48dcc97a14a62d6bb997815967dd0acdc
+Merge: 9db96c9 04bcf00
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Jun 6 15:14:17 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/grub-menu'
+
+commit 04bcf0072a54883f26a7f57b6c1a6cffe0337eec
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Jun 5 17:52:38 2025 -0500
+
+    Un-break bootloader updates
+
+commit 9db96c9820e93fbfa16e16776c3cbb58145bab63
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 21 13:55:53 2025 +0000
+
+    bumped changelog version
+
 commit 5d9d93909271f1d0fd1a4dfd3d48b346657b4226
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed May 21 09:00:57 2025 -0400
