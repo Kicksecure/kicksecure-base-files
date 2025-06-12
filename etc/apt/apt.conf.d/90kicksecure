@@ -76,23 +76,18 @@
 #Acquire::socks::proxy "socks://10.152.152.10:9104/";
 
 ## apt caching proxy:
-## apt-cacher-ng
+## approx
 ##
-## If you want to use apt-cacher-ng,
+## If you want to use approx
 ## you have to disable the apt-get uwt wrapper:
 ##     create a file /etc/uwt.d/50_user.conf with
 ##     uwtwrapper["/usr/bin/apt-get"]="0"
 ##
+## TODO: The following two lines are now obsolete and should be replaced.
 ## If you want to use apt-cacher-ng with Stream Isolation,
 ## see /usr/bin/apt-cacher-ng_uwt
 ##
-## Working.
-#Acquire::http { Proxy "http://127.0.0.1:3142"; };
-##
-## Untested.
-#Acquire::https::proxy "https://127.0.0.1:3142/";
-##
-## Untested.
-#Acquire::ftp::proxy "ftp://127.0.0.1:3142/";
+## Use of approx requires a customized sources.list.d. See `man approx` for
+## more info.
 
 ## End of Kicksecure /etc/apt/apt.conf.d/90kicksecure
