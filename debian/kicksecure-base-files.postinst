@@ -39,14 +39,10 @@ case "$1" in
       true "INFO: Configuring $DPKG_MAINTSCRIPT_PACKAGE..."
 
       ## 70_dpkg_origins {{
-
       ## || true to support re-running the script
-
       ## Get rid of old symlink.
-      unlink /etc/dpkg/origins/default || true
-
-      ln -s /etc/dpkg/origins/kicksecure /etc/dpkg/origins/default || true
-
+      #unlink /etc/dpkg/origins/default || true
+      #ln -s /etc/dpkg/origins/kicksecure /etc/dpkg/origins/default || true
       ## 70_dpkg_origins }}
 
       true "INFO: End configuring $DPKG_MAINTSCRIPT_PACKAGE."
