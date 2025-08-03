@@ -1,3 +1,17 @@
+commit 0b64da9d6bec34bb6286dcc3b90112fbf913482f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 3 05:58:25 2025 -0400
+
+    no longer divert /etc/dpkg/origins/default
+    
+    because it breaks `reverse-depends`
+
+commit ca4471a6d9986ea922d82aba107a474e7125c52c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Jun 14 11:51:17 2025 +0000
+
+    bumped changelog version
+
 commit 88fec32bcc6fbbed7b7f12e5377989034ed07499
 Merge: 16e1276 de1ff80
 Author: Patrick Schleizer <adrelanos@whonix.org>
