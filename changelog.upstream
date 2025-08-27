@@ -1,8 +1,41 @@
+commit 831a199177d20be894cab1de7a7d88c45f022c0f
+Merge: da1ff3d 72967f6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 27 05:55:10 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 72967f6f520fe601f263e1dd6ab98e567b598748
+Merge: 75d5309 da1ff3d
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Aug 26 19:19:50 2025 -0500
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit da1ff3d06aa025891ec4c4ee9e765d286808b87f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 26 09:07:21 2025 +0000
+
+    bumped changelog version
+
 commit 4c486baa99425bb359697d291fa8f6572b3fbfa7
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Aug 26 05:07:20 2025 -0400
 
     re-generate man pages (generated using "genmkfile manpages")
+
+commit 75d53092478ac1e393d8a21bf03694983bde0a70
+Merge: 7e54ab0 6fcefdf
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Aug 21 19:52:51 2025 -0500
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit 7e54ab0751b23edf9cd8082be90e86b68d8a9e74
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Aug 21 18:23:44 2025 -0500
+
+    Add /usr/share/kicksecure to XDG_CONFIG_DIRS, add desktop background for Kicksecure LXQt, add lxqt-panel and pcmanfm-qt configuration
 
 commit 6fcefdf385ef91f4b066c310331a8f310aa0b5c9
 Merge: f61ff93 4a70c4c
