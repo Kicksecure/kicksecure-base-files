@@ -7,7 +7,7 @@ License: AGPL-3+
 Files: boot/grub/themes/kicksecure/*
 Comments: Based upon the Acer theme from
           https://github.com/AdisonCavani/distro-grub-themes
-Copyright: 2021 - 2024 Adrian Środoń <adriansrodon@tuta.io>
+Copyright: 2021 - 2024 Adrian Srodon <adriansrodon@tuta.io>
                   2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
 License: GPL-3
  On Debian systems, the full text of the GNU General Public
