@@ -1,3 +1,35 @@
+commit d89ca2bfe948cba83a315abb2c1604fdf2d6749f
+Merge: cf4f71a f74ede1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 28 17:08:05 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/sdwdate-gui'
+
+commit cf4f71a6fca798c4c5ec87658606e627042197f7
+Merge: 5142245 64abe2d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 28 16:59:28 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 64abe2d8d53855d7410039650cd68483a45117df
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Sep 28 12:03:24 2025 -0500
+
+    Add Swaylock configuration for Kicksecure
+
+commit 4be9033aff4a0dd4ca18c72201c08904de708a0d
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sat Sep 27 22:52:50 2025 -0500
+
+    Disable pcmanfm-qt thumbnailer, ensure pcmanfm-qt system-wide settings are honored in both user and sysmaint sessions
+
+commit 51422456026805c2097dadb4ec6fdffc4ac1a42b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Sep 19 16:13:49 2025 +0000
+
+    bumped changelog version
+
 commit d1e60dbc73a98bf9bd890efb667c1c72764fef99
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Sep 18 10:07:37 2025 -0400
@@ -135,6 +167,12 @@ Date:   Sun Aug 3 05:58:25 2025 -0400
     no longer divert /etc/dpkg/origins/default
     
     because it breaks `reverse-depends`
+
+commit f74ede18f2ee3a195d83b8bf2f60a77226902d18
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Wed Jun 25 20:19:23 2025 -0500
+
+    Advertise a Kicksecure feature flag to enable sdwdate-gui communication
 
 commit ca4471a6d9986ea922d82aba107a474e7125c52c
 Author: Patrick Schleizer <adrelanos@whonix.org>
