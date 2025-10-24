@@ -17,6 +17,8 @@ Architecture: all
 Depends: less, sudo, ${misc:Depends}
 Provides: ${diverted-files}
 Conflicts: ${diverted-files}
+Breaks: desktop-config-dist (<< 3:14.7-1)
+Replaces: desktop-config-dist (<< 3:14.7-1)
 Description: Kicksecure base system miscellaneous files
  This package contains several important miscellaneous files, such as
  /etc/issue, /etc/motd, /etc/dpkg/origins/kicksecure,
