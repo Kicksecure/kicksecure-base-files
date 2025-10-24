@@ -1,3 +1,22 @@
+commit 751ee7131fbf88c9250c4c47a001a6f3335a4d12
+Merge: 67ab151 b419f85
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Oct 24 00:21:31 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit b419f8531ed6d736ad410afbe72b77f00ae9578d
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Oct 23 20:32:05 2025 -0500
+
+    Move Waybar configuration for sysmaint sessions to *-base-files packages
+
+commit 67ab15162145d0289a4d5cdd5f8ea8f4bff88196
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 28 21:08:59 2025 +0000
+
+    bumped changelog version
+
 commit d89ca2bfe948cba83a315abb2c1604fdf2d6749f
 Merge: cf4f71a f74ede1
 Author: Patrick Schleizer <adrelanos@whonix.org>
