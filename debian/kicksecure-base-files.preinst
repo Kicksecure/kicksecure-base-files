@@ -1,0 +1,42 @@
+#!/bin/bash
+
+## Copyright (C) 2025 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+if [ -f /usr/libexec/helper-scripts/pre.bsh ]; then
+   source /usr/libexec/helper-scripts/pre.bsh
+fi
+
+set -e
+
+true "
+#####################################################################
+## INFO: START: $DPKG_MAINTSCRIPT_PACKAGE $DPKG_MAINTSCRIPT_NAME $@
+#####################################################################
+"
+
+## config-package-dev displace migration from desktop-config-dist to anon-gw-base-files
+## Based on usability-misc/debian/usability-misc.preinst
+if [ "$(dpkg-divert --listpackage /etc/xdg/waybar/config.jsonc)" = "desktop-config-dist" ]; then
+  unlink /etc/xdg/waybar/config.jsonc || true
+  dpkg-divert --rename --package desktop-config-dist --remove /etc/xdg/waybar/config.jsonc || true
+fi
+if [ "$(dpkg-divert --listpackage /etc/xdg/waybar/style.css)" = "desktop-config-dist" ]; then
+  unlink /etc/xdg/waybar/style.css || true
+  dpkg-divert --rename --package desktop-config-dist --remove /etc/xdg/waybar/style.css || true
+fi
+
+true "INFO: debhelper beginning here."
+
+#DEBHELPER#
+
+true "INFO: Done with debhelper."
+
+true "
+#####################################################################
+## INFO: END  : $DPKG_MAINTSCRIPT_PACKAGE $DPKG_MAINTSCRIPT_NAME $@
+#####################################################################
+"
+
+## Explicitly "exit 0", so eventually trapped errors can be ignored.
+exit 0

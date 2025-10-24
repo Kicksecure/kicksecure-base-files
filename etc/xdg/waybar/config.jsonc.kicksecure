@@ -1,0 +1,21 @@
+{
+	"layer": "top",
+	"height": 30,
+	"modules-right": ["battery", "pulseaudio", "tray", "clock"],
+	"battery": {
+		"format": "Battery: {capacity}% {icon}",
+		"interval": 5
+	},
+	"pulseaudio": {
+		"format": "Volume: {volume}%"
+	},
+	"clock": {
+		"format": "{:%a, %d. %b  %H:%M:%S}",
+		"interval": 1,
+		"tooltip": false
+	},
+	"tray": {
+		"icon-size": 21,
+		"spacing": 10
+	}
+}

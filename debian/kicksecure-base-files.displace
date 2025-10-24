@@ -3,3 +3,5 @@
 
 /etc/issue.kicksecure
 /etc/motd.kicksecure
+/etc/xdg/waybar/config.jsonc.kicksecure
+/etc/xdg/waybar/style.css.kicksecure
