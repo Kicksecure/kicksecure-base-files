@@ -2,7 +2,7 @@
 
 This package contains several important miscellaneous files, such as
 /etc/issue, /etc/motd, /etc/dpkg/origins/kicksecure,
-/etc/skel/.bashrc, /usr/bin/kicksecure, and others.
+/usr/bin/kicksecure, and others.
 
 Sets the KICKSECURE environment variable to 1 as well.
 
