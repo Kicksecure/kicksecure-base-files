@@ -14,7 +14,7 @@ Rules-Requires-Root: no
 
 Package: kicksecure-base-files
 Architecture: all
-Depends: less, sudo, ${misc:Depends}
+Depends: less, ${misc:Depends}
 Provides: ${diverted-files}
 Conflicts: ${diverted-files}
 Breaks: desktop-config-dist (<< 3:14.7-1)
