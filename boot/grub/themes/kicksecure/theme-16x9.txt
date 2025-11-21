@@ -64,7 +64,7 @@ terminal-border: "0"
   left = 15%
   top = 92%
   align = left
-  text = "press 'e'. To access a command line, press 'c'."
+  text = "press 'e'. To access a command line, press 'c'. To leave a submenu, press 'Esc'."
   color = "#c4c4c4"
   font = "Inter-grub Regular 17"
 }
