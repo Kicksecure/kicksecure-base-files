@@ -1,3 +1,22 @@
+commit f70bc73dc7c4c5f6c1ca8893c9d54945a411474f
+Merge: 2a59354 1d08674
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Nov 21 03:53:15 2025 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 1d08674864362eb6385d3adee1f75b9d4814b9df
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Nov 13 18:15:55 2025 -0600
+
+    Tell user how to leave a GRUB submenu
+
+commit 2a593547d176f9fde65b875ea1f19aad816f4928
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Nov 10 07:56:33 2025 +0000
+
+    bumped changelog version
+
 commit e62f13f831d003b38496ad3479942dcc8aa8d5cd
 Merge: b27e46f 2d81531
 Author: Patrick Schleizer <adrelanos@whonix.org>
