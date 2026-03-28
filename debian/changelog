@@ -1,3 +1,9 @@
+kicksecure-base-files (3:10.4-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 28 Mar 2026 09:45:21 +0000
+
 kicksecure-base-files (3:10.3-1) unstable; urgency=medium
 
   * New upstream version (local package).
