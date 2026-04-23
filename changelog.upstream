@@ -1,3 +1,22 @@
+commit 0f1917e0782b447f8572d0729fe8574dbaacc0ab
+Merge: b3f4580 8691897
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 23 04:44:20 2026 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 8691897cfa2734712e29cdedb013b68a28663860
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Wed Apr 22 18:59:25 2026 -0400
+
+    Fix the default archiver application
+
+commit b3f4580a688a97bc022ad55e81b964e6be7945aa
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Apr 5 10:28:32 2026 +0000
+
+    bumped changelog version
+
 commit 21eec38196c6c14502744b66e77b8bb26cd9edc7
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Apr 5 05:13:43 2026 -0400
@@ -332,7 +351,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Aug 3 05:58:25 2025 -0400
 
     no longer divert /etc/dpkg/origins/default
-    
+
     because it breaks `reverse-depends`
 
 commit f74ede18f2ee3a195d83b8bf2f60a77226902d18
