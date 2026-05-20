@@ -1,3 +1,9 @@
+commit 3176da7d16efdd1e177a3206802ee219ebebf233
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 23 08:45:20 2026 +0000
+
+    bumped changelog version
+
 commit 0f1917e0782b447f8572d0729fe8574dbaacc0ab
 Merge: b3f4580 8691897
 Author: Patrick Schleizer <adrelanos@whonix.org>
@@ -1038,7 +1044,7 @@ commit a3835e1eb1095f0ca047d15848bd0b1a6387a170
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Mar 27 04:33:16 2020 -0400
 
-    ™
+    _
 
 commit dc7de3a2cc9fd710cfb4147d9e9dcfb64b32d492
 Author: Patrick Schleizer <adrelanos@riseup.net>
