@@ -3,8 +3,58 @@
 ## Copyright (C) 2012 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
 ## See the file COPYING for copying conditions.
 
+## colors() sets the full BashFAQ/037 terminfo palette and this help text uses
+## only a few of them. The rest are deliberately available rather than dead, so
+## they are flagged file-wide rather than deleted.
+# shellcheck disable=SC2034
+## 'A && { ... } 2>/dev/null ||:' is what makes the whole palette optional:
+## shellcheck reads it as a mistaken if-then-else, but C running when A is true
+## is exactly the intent -- ':' swallows any tput failure.
+# shellcheck disable=SC2015
+
+set -o errexit
+set -o nounset
+set -o pipefail
+set -o errtrace
+shopt -s inherit_errexit
+shopt -s shift_verbose
+
+## colors() returns early on an unset or empty TERM, and the help text below
+## reads these unconditionally. Empty is what they expanded to before strict
+## mode: the text prints without escape sequences, which is the point of the
+## early return.
+alt=""
+ealt=""
+hide=""
+show=""
+save=""
+load=""
+bold=""
+stout=""
+estout=""
+under=""
+eunder=""
+reset=""
+blink=""
+italic=""
+eitalic=""
+red=""
+green=""
+yellow=""
+blue=""
+magenta=""
+cyan=""
+white=""
+default=""
+eed=""
+eel=""
+ebl=""
+ewl=""
+draw=""
+back=""
+
 colors() {
-   if [ "$TERM" = "" ]; then
+   if [ "${TERM:-}" = "" ]; then
       return 0
    fi
 
@@ -27,7 +77,7 @@ colors() {
       blink=$(    tput blink  || tput mb      ) # Start blinking
       italic=$(   tput sitm   || tput ZH      ) # Start italic
       eitalic=$(  tput ritm   || tput ZR      ) # End   italic
-      [[ $TERM != *-m ]] && {
+      [[ ${TERM} != *-m ]] && {
       red=$(      tput setaf 1|| tput AF 1    )
       green=$(    tput setaf 2|| tput AF 2    )
       yellow=$(   tput setaf 3|| tput AF 3    )
@@ -40,7 +90,7 @@ colors() {
       eed=$(      tput ed     || tput cd      )   # Erase to end of display
       eel=$(      tput el     || tput ce      )   # Erase to end of line
       ebl=$(      tput el1    || tput cb      )   # Erase to beginning of line
-      ewl=$eel$ebl                                # Erase whole line
+      ewl=${eel}${ebl}                                # Erase whole line
       draw=$(     tput -S <<< '   enacs
                                       smacs
                                       acsc
@@ -53,7 +103,7 @@ colors() {
 
 colors
 
-echo "\
+printf '%s\n' "\
 ${bold}Documentation can be found on Kicksecure homepage.
 https://www.kicksecure.com
 
