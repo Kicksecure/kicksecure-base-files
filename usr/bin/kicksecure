@@ -9,15 +9,13 @@ set -o pipefail
 set -o errtrace
 shopt -s inherit_errexit
 shopt -s shift_verbose
+export LC_ALL=C
 
 ## sets: bold, under, reset and the rest of the palette, already emptied when
 ## the terminal cannot render them -- no TERM, TERM=dumb, NO_COLOR, not a tty.
 ## Replaces an inline BashFAQ/037 tput implementation that duplicated this.
 # shellcheck source=../../../helper-scripts/usr/libexec/helper-scripts/get_colors.sh
-## Sibling repo: absent in an isolated CI checkout, so shellcheck cannot follow
-## it there. The source= path above still documents where it lives.
-# shellcheck disable=SC1091
-source /usr/libexec/helper-scripts/get_colors.sh
+source "${HELPER_SCRIPTS_PATH:-}"/usr/libexec/helper-scripts/get_colors.sh
 
 ## Assigned by the sourced get_colors.sh above, which shellcheck cannot follow
 ## in an isolated checkout.
