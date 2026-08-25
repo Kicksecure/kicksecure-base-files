@@ -1,3 +1,326 @@
+commit 129092908073b111aa61b40701f7d764988fc340
+Merge: 6602ba6 4fd9bfc
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Aug 24 01:32:07 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/org-ai-assisted/ai'
+
+commit 4fd9bfc656579a814081c629825e27275ced99eb
+Author: claude (dev272 e8b76afb-795c-4739-8ebd-023de854021e) <noreply@anthropic.com>
+Date:   Fri Aug 21 04:27:55 2026 -0400
+
+    kicksecure-base-files: source helper-scripts via HELPER_SCRIPTS_PATH, drop SC1091 disable
+
+    - usr/bin/kicksecure: use source "${HELPER_SCRIPTS_PATH:-}"/usr/libexec/helper-scripts/get_colors.sh;
+      drop the dead '# shellcheck disable=SC1091' and the stale sibling note.
+    - .github/dm-consumer.yml: add dist-ai-tests helper-scripts: true so CI checks out
+      the sibling helper-scripts and shellcheck follows the source.
+    - completed pre-existing whole-file style debt (R-010: add export LC_ALL=C to the strict block).
+
+    Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+commit 497cfc5931fb85ac1062204073bc9b55979cd441
+Author: claude (dev163 38f9745c-aed1-4fb4-b6ae-9899f20f8de2) <noreply@anthropic.com>
+Date:   Sat Aug 8 04:55:46 2026 -0400
+
+    CI: enrol in the pre-push static gate
+
+    This repo had no GitHub Actions workflow at all, so nothing verified its PRs on
+    the server side -- the only gate was ci-repro run locally.
+
+    The workflow file is the canonical consumer template, copied verbatim from
+    developer-meta-files/consumer-templates/.github/workflows/. It is managed: once
+    present, dm-packaging-helper-script's pkg_update_consumer_workflows keeps it in
+    sync, so it must not be hand-edited here.
+
+    Enrolment is deliberately a SEPARATE act from propagation: that function uses
+    pkg_update_if_exists, which only updates a workflow that already exists, and
+    pkg_install_dependabot_yml skips any repo with no .github/workflows/ directory.
+    Neither creates the first one. Hence this commit.
+
+    Scope: the repos this session actually changed and that ship shell code -- not
+    every repo lacking CI. Enrolling a repo consumes shared org-wide Actions
+    concurrency (20 jobs, the real limit; public repos are not minute-billed), so it
+    is worth spending where there is signal.
+
+    Verified BEFORE enrolling: 'ci-repro.sh --worktree' passes for this repo, so the
+    gate arrives green rather than turning someone's PR red on arrival.
+
+    NOTE, so it is not a surprise: creating .github/workflows/ makes this repo
+    eligible for the canonical .github/dependabot.yml on the next propagation pass,
+    which pkg_install_dependabot_yml installs into any repo that uses Actions.
+
+commit eb98d87e71747384e9347367375d4637d520d6a9
+Author: claude (dev163 38f9745c-aed1-4fb4-b6ae-9899f20f8de2) <noreply@anthropic.com>
+Date:   Fri Aug 7 14:47:08 2026 -0400
+
+    declare helper-scripts: get_colors.sh is sourced unconditionally
+
+    The get_colors.sh port replaced inline 'tput' colour handling with a source of
+    another package's file. It did not declare the new dependency, so on a minimal
+    install the affected commands exit at the source line -- a breakage introduced
+    by the port itself, not a pre-existing one.
+
+    Affected, and introduced here:
+      kicksecure-base-files  usr/bin/kicksecure
+      whonix-base-files      usr/bin/whonix
+      tor-ctrl               usr/bin/tor-ctrl-circuit, usr/bin/tor-ctrl-stream
+
+    None of the three had any path to helper-scripts in Depends.
+
+    systemcheck is also included, but was NOT broken: its six check_*.bsh files
+    already sourced get_colors.sh before this work, and it reaches helper-scripts
+    transitively through dist-base-files. A direct unconditional source still
+    deserves a direct dependency.
+
+    user-sysmaint-split is deliberately NOT changed. Its one source is in
+    profile.d_20_sysmaint_warn.sh and carries '|| true', so it degrades instead of
+    failing -- and it runs in every login shell, where failing closed would be far
+    worse.
+
+    Found by codex, on whonix-base-files only. The other packages came from grepping
+    for the same pattern.
+
+    Testing
+    -------
+
+    A cross-package check rather than a per-package one, since the omission can
+    recur in any package that adopts get_colors.sh:
+
+      7 package(s) source get_colors.sh unguarded; fail=0
+
+    It only considers UNGUARDED sources -- a '||' fallback is exempt, which is what
+    excludes user-sysmaint-split -- and it refuses to pass when it finds no sources
+    at all, so a wrong path reports failure rather than a silent green.
+
+    Canary: removing helper-scripts from whonix-base-files gives
+      FAIL: whonix/whonix-base-files  sources get_colors.sh unguarded but does NOT
+            declare helper-scripts
+            usr/bin/whonix
+    and exits 1.
+
+commit 87b4e63d3bce0e039d8dd299504407a3eabdc875
+Author: claude (dev163 38f9745c-aed1-4fb4-b6ae-9899f20f8de2) <noreply@anthropic.com>
+Date:   Fri Aug 7 13:14:21 2026 -0400
+
+    kicksecure-base-files: a missing theme file must not abort update-grub
+
+    An ai-review pass found that etc/default/grub.d/30_kicksecure.cfg copies its
+    theme files with an unguarded 'cp'.
+
+    That file is SOURCED by grub-mkconfig, which runs under 'set -e'. The 'ln -s'
+    this replaced succeeded even when the target was absent -- it just left a
+    dangling symlink -- but 'cp' returns non-zero, and in a sourced fragment under
+    errexit that ABORTS grub-mkconfig. 'update-grub' then stops producing a
+    bootloader configuration at all.
+
+    A theme file can legitimately be absent: the package removed but not purged,
+    leaving this conffile behind, or the file deleted by hand.
+
+    Demonstrated directly, since the first attempt to reproduce it through the
+    whole .cfg never reached the cp:
+
+      unguarded:  cp: cannot stat '.../missing.png'   -> outer exit=1, the line
+                                                         after the cp never ran
+      guarded:    AFTER_GUARD printed                 -> outer exit=0
+
+    Both copies are now guarded by 'test -f' on their SOURCE.
+
+    'test -f' rather than '|| true' on purpose: a MISSING source is expected and
+    must be tolerated, but a cp that fails for any other reason -- permissions, a
+    full disk -- should still abort, because that is a genuine problem with the
+    boot configuration and silently continuing would leave a half-configured
+    bootloader.
+
+    Gate exit 0 in an ISOLATED checkout.
+
+    NOTE ON SCOPE: the 'cp' was introduced by earlier commits on this branch
+    (2355a38, 8370bad), not by the strict-mode work. It is fixed here because it is
+    in this PR's diff and it breaks the boot path.
+
+commit 7a487aadac62f195892a457663a18040295b9eac
+Author: claude (dev163 38f9745c-aed1-4fb4-b6ae-9899f20f8de2) <noreply@anthropic.com>
+Date:   Fri Aug 7 11:29:06 2026 -0400
+
+    kicksecure-base-files: use the shared get_colors.sh instead of an inline tput palette
+
+    The script carried its own ~100-line BashFAQ/037 terminfo implementation --
+    'colors()' plus a 28-name palette -- duplicating what
+    /usr/libexec/helper-scripts/get_colors.sh already provides. Sourcing the shared
+    helper removes the duplicate.
+
+    It is also strictly better than what it replaces:
+
+    - The inline version suppressed colour only on an empty TERM. get_colors.sh
+      also honours NO_COLOR, ANSI_COLORS_DISABLED, TERM=unknown, and 'stderr is not
+      a terminal' -- so piping the output no longer embeds escape sequences.
+    - It sets every name to the empty string in the no-colour case, which is what
+      the strict-mode initialisation added in the previous commit was doing by
+      hand. That initialisation is now unnecessary and is gone, along with the
+      file-wide SC2034 and SC2015 waivers the inline implementation needed.
+
+    ONE DELIBERATE OUTPUT CHANGE, in the colour case only
+    ------------------------------------------------------
+
+    'reset' was 'tput sgr0', which on xterm-256color emits '\033(B\033[m' -- exit
+    attribute mode PLUS select-ASCII-character-set. get_colors.sh uses '\033[0m',
+    attributes only.
+
+    Both reset every attribute this text sets. The dropped '\033(B' only matters to
+    a terminal left in an alternate character set, and nothing here enters one --
+    the inline palette's 'draw' capability was assigned and never used, and
+    get_colors.sh documents 'draw' as intentionally unimplemented. Measured under a
+    real PTY: bold '\033[1m' and underline '\033[4m' are byte-identical, output is
+    8 bytes shorter.
+
+    Testing
+    -------
+
+    Gate exit 0 in an ISOLATED checkout.
+
+    Differential re-run with the REAL get_colors.sh installed, across TERM set,
+    empty and unset -- the three no-colour paths, which are byte-identical:
+
+      5 same, 0 differing
+
+    Plus a colour-enabled comparison under a real PTY, since both implementations
+    gate on "is stderr a terminal": the only difference is the reset sequence
+    described above.
+
+commit 2fac668fed46e36ae1639448535047435de4100f
+Author: claude (dev163 38f9745c-aed1-4fb4-b6ae-9899f20f8de2) <noreply@anthropic.com>
+Date:   Fri Aug 7 10:49:56 2026 -0400
+
+    kicksecure-base-files: R-010 strict mode for the 3 bash scripts
+
+    Files: usr/bin/{kicksecure,kicksecure-disclaimer,kicksecure-license}.
+
+    etc/qubes/post-install.d/30-kicksecure.sh is NOT touched: it is a POSIX 'sh'
+    script, where shopt and pipefail do not exist. How the standalone sh scripts
+    across the tree should be handled is one decision to make once.
+
+    Real nounset trap
+    -----------------
+
+    Same shape as whonix-base-files: colors() returns EARLY when TERM is unset or
+    empty, leaving the whole terminfo palette unassigned, and the help text
+    interpolates ${bold}, ${under} and ${reset} unconditionally. So under nounset
+    'kicksecure' aborted in exactly the case colors() exists to handle -- no
+    terminal -- and equally with TERM set but tput unavailable.
+
+    The palette is initialised to empty, which is what those names expanded to
+    before: the text prints without escape sequences, which is the point of the
+    early return.
+
+    Also
+    ----
+
+    - 'echo' -> printf for the help text, '$TERM' -> '${TERM:-}', braces on the
+      remaining bare reads, 'cat --' in the two one-line scripts.
+    - File-wide SC2034 waiver: colors() sets the full BashFAQ/037 palette and this
+      text uses a few of them; the rest are deliberately available, not dead.
+    - File-wide SC2015 waiver on 'A && { ... } 2>/dev/null ||:' -- C running when A
+      is true is exactly the intent, since ':' swallows any tput failure.
+
+    Testing
+    -------
+
+    Gate exit 0 in an ISOLATED checkout.
+
+    Harness at ~/strict-pass-tests/kbf-test/, adapted from the whonix-base-files
+    one. The marker-file axis was REMOVED after checking it: unlike 'whonix',
+    'kicksecure' prints ONE unconditional help text -- 16 lines with and without
+    the gateway marker -- so keeping that axis would have reported 11 cases while
+    testing 5.
+
+      5 same, 0 differing
+
+    Canary: with the palette initialisation removed but strict mode kept, all three
+    TERM cases abort -- 2 same, 3 differing.
+
+commit 8370bad85563ca654fd3fd19f6edf64fdc835c41
+Author: claude (dev141 763ccfe0-7bd8-4e8c-afd0-c39aceb48d72) <noreply@anthropic.com>
+Date:   Sat Aug 1 08:04:47 2026 -0400
+
+    grub.d: comment the current WHY, not what the code used to do
+
+    - the '/sys/firmware/efi' branch and the earlier symlink are gone; describing
+      them as history dates the comment instead of explaining the code
+
+commit 2355a38bf74085a301bdf7c3e533bdd8c83d9c6a
+Author: claude (dev141 763ccfe0-7bd8-4e8c-afd0-c39aceb48d72) <noreply@anthropic.com>
+Date:   Sat Aug 1 06:23:33 2026 -0400
+
+    grub: select the theme variant with cp at grub-mkconfig time, not a dpkg symlink
+
+    Replaces the shipped-symlink approach. A packaged link under /boot has two
+    install-time hazards: /boot may not be mounted when the package is installed, and
+    a /boot that is itself a symlink makes the packaged link fail. grub-mkconfig runs
+    later, on a system where /boot is mounted, so doing the selection there avoids
+    both.
+
+    'cp', not 'ln': a symlink under /boot inherits the same hazards, and a copy is
+    inert -- nothing downstream has to resolve it.
+
+    '--remove-destination' specifically: it unlinks the destination before writing,
+    so a background.png left as a SYMLINK by an earlier version is REPLACED rather
+    than written THROUGH. Writing through would corrupt whatever it points at, and
+    the postinst links names in that directory to ../dist-common.
+
+    Unchanged: the snippet still does not branch on '/sys/firmware/efi' (the BUILD
+    HOST's firmware at grub-mkconfig time), the 16:9 choice is unconditional, and
+    GRUB_GFXMODE stays 1280x720,auto with the manual citation.
+
+    Test reworked to match: it now requires cp with --remove-destination, forbids a
+    symlink under /boot, and requires debian/*.links to ship NO /boot alias -- the
+    inverse of what it asserted for the previous design. It reads the values
+    statically rather than sourcing the snippet, because the snippet now writes to
+    /boot by design. Still fails 4 assertions against the original efi-branching
+    version.
+
+commit 1bb9b253d7dd0d699d7f5585f3c0cafc832bc9dd
+Author: claude (dev141 763ccfe0-7bd8-4e8c-afd0-c39aceb48d72) <noreply@anthropic.com>
+Date:   Sat Aug 1 06:18:01 2026 -0400
+
+    grub: cite the manual for the GRUB_GFXMODE ',auto' fallback
+
+    The ',auto' suffix was asserted without evidence. Verified against the GRUB
+    manual, '15.1.12 gfxmode': the resolution may be a sequence of modes separated by
+    commas or semicolons, 'each will be tried in turn until one is found', and each
+    mode may be 'auto', WIDTHxHEIGHT or WIDTHxHEIGHTxDEPTH.
+
+    grub-mkconfig passes the value through verbatim (set gfxmode from GRUB_GFXMODE in
+    /etc/grub.d/00_header), so those semantics apply to GRUB_GFXMODE directly. The
+    claim holds; it is now sourced rather than assumed.
+
+commit 813fdfb54eac13b2f60b8ae9312e4ef482dabc8a
+Author: claude (dev141 763ccfe0-7bd8-4e8c-afd0-c39aceb48d72) <noreply@anthropic.com>
+Date:   Fri Jul 31 22:16:01 2026 -0400
+
+    grub: pin the theme variant instead of probing the build host's firmware
+
+    - 30_kicksecure.cfg picked the theme and resolution with
+      'if [ -d /sys/firmware/efi ]'. grub-mkconfig sources it inside the BUILD
+      chroot, where help-steps/chroot-raw mounts a fresh sysfs, so the test read the
+      BUILD HOST's firmware, not the target's.
+    - Two consequences, both real: two build hosts produce two different images from
+      identical source (a reproducibility mismatch with no defect behind it), and a
+      BIOS-booted build host stamps the 4:3 theme onto every image regardless of the
+      display it will run on. Firmware type does not indicate panel aspect ratio.
+    - background.png and theme.txt are now shipped symlinks
+      (debian/kicksecure-base-files.links), so the snippet is declarative and
+      sourcing it no longer writes to /boot.
+    - 16:9 / 1280x720: the near-universal panel shape; a 4:3 screen letterboxes the
+      background rather than failing. ',auto' fallback so firmware that cannot set
+      the mode gets grub's own choice instead of an unreadable console.
+    - Regression test with canaries: dist-ai 2f025d3 grub_theme_pinning_test.sh.
+
+commit 6602ba62d5e29b74a407fd95b6dc484fa4830b41
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 20 22:06:31 2026 +0000
+
+    bumped changelog version
+
 commit 3b38c45f9c0debd5159b86c1d842ce95f67bcc5d
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed May 20 16:56:54 2026 -0400
