@@ -1,3 +1,29 @@
+commit 5d4b6c3057d0e6eea3892901b09ecab98ceea8c3
+Merge: 68b7475 b14f022
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Aug 31 03:34:19 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit b14f0229a51f801731d4f542a3a0eab8ec3d3164
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Aug 30 15:56:23 2026 -0400
+
+    Polish, revert unacceptable changes to GRUB theming and leave TODO for AI to implement
+
+commit b1a49d36296d8c92c9fe34ce165ad34fcabd30f9
+Merge: 6602ba6 4fd9bfc
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Aug 30 15:31:44 2026 -0400
+
+    Merge branch 'ai' into arraybolt3/trixie
+
+commit 68b74755b48390233585f0d2d58197673f475474
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 25 03:18:00 2026 +0000
+
+    bumped changelog version
+
 commit 129092908073b111aa61b40701f7d764988fc340
 Merge: 6602ba6 4fd9bfc
 Author: Patrick Schleizer <adrelanos@whonix.org>
