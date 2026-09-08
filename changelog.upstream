@@ -1,3 +1,36 @@
+commit 84acc5766d25ee9d1711514ad2c6d557c8993b23
+Merge: 5a57f5d 0b644d9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 7 01:03:57 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit 0b644d99448d2bf9a86bb4ca16af5f7167605f0a
+Merge: 8c43791 5a57f5d
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Sep 6 16:23:07 2026 -0400
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit 5a57f5d04c1649bedf3cdc95754a9db198a4bfb4
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 6 16:37:58 2026 +0000
+
+    bumped changelog version
+
+commit 8c43791b1a5a9e7b22aa06ee5c96b2da1dff5abd
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Sep 6 00:17:23 2026 -0400
+
+    Rework to avoid ln, to support weird /boot filesystems
+
+commit 9a2de4b9118c43a6fc68112303ea7fc61ad96b2e
+Merge: b14f022 68b7475
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Sep 6 00:02:20 2026 -0400
+
+    Merge branch 'master' into arraybolt3/trixie
+
 commit 5d4b6c3057d0e6eea3892901b09ecab98ceea8c3
 Merge: 68b7475 b14f022
 Author: Patrick Schleizer <adrelanos@whonix.org>
