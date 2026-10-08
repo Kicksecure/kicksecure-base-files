@@ -15,11 +15,16 @@ true "
 #####################################################################
 "
 
-## Symlink all shared GRUB theme files
+## Symlink all shared GRUB theme files.
+## Fall back to copying them if creating the symlink fails, because /boot may
+## be a FAT32 partition (for example the EFI system partition), which does not
+## support symlinks.
 readarray -t grub_theme_common_file_list < <(cd '/boot/grub/themes/dist-common'; find -mindepth 1 -maxdepth 1 | sed 's/^.\///')
 for grub_theme_common_file in "${grub_theme_common_file_list[@]}"; do
    rm -rf "/boot/grub/themes/kicksecure/${grub_theme_common_file}"
-   ln -s "../dist-common/${grub_theme_common_file}" "/boot/grub/themes/kicksecure/${grub_theme_common_file}"
+   if ! ln -s "../dist-common/${grub_theme_common_file}" "/boot/grub/themes/kicksecure/${grub_theme_common_file}" 2>/dev/null; then
+      cp -r -- "/boot/grub/themes/dist-common/${grub_theme_common_file}" "/boot/grub/themes/kicksecure/${grub_theme_common_file}"
+   fi
 done
 
 ## https://phabricator.whonix.org/T377
